@@ -28,7 +28,7 @@ def get_fruityvice_data(this_fruit_choice):
   
 streamlit.header('Fruitvice Fruit Advice!')
 try:
-  fruit_choice = streamlit.text_input('What fruit would you like informatiuon about?', 'kiwi')
+  fruit_choice = streamlit.text_input('What fruit would you like information about?', 'kiwi')
   if not fruit_choice:
     streamlit.error('Please select a fruit for information.')
   else:
@@ -37,7 +37,6 @@ try:
 except URLError as e:
   streamlit.error()
 
-streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
